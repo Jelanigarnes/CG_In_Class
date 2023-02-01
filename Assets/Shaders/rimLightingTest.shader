@@ -7,8 +7,18 @@ Shader "Custom/rimLightingTest"
     }
     SubShader
     {
+    //For Hologram effect
+    Tags{"Queue" = "Transparent"}
+
+    //For Hologram
+    Pass{
+        ZWrite On 
+        ColorMask 0
+    }
+
     CGPROGRAM
-        #pragma surface surf Lambert
+    //alpha:fade for hologram
+        #pragma surface surf Lambert alpha:fade
         struct Input {
             float3 viewDir;
         };
@@ -21,6 +31,9 @@ Shader "Custom/rimLightingTest"
         half rim = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));
         //o.Emission = _RimColor.rgb * rim;
         o.Emission = _RimColor.rgb * pow(rim, _RimPower);
+
+        //For Hologram
+        o.Alpha = pow(rim, _RimPower);
         }
 
         ENDCG
