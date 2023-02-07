@@ -36,6 +36,8 @@ Shader "Custom/AllProps"
 
 			}
 		ENDCG
+
+	
 	}
 		FallBack "Diffuse"
 }
