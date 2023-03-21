@@ -311,7 +311,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223727608}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb820d25ee19ccf4e9053538c452edea, type: 3}
   m_Name: 
@@ -340,7 +340,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloomShader: {fileID: 4800000, guid: f7ff0b675a3f660408f4c4c80960165c, type: 3}
-  iterations: 4
+  debug: 0
+  iterations: 2
+  threshold: 0.6
+  intensity: 0
 --- !u!1 &245358335
 GameObject:
   m_ObjectHideFlags: 0
