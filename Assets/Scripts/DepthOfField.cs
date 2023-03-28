@@ -19,10 +19,10 @@ public class DepthOfField : MonoBehaviour
     [Range(0.1f, 100f)]
     public float focusDistance = 10f;
 
-    [Range(0.1f, 10f)]
+    [Range(0.1f, 30f)]
     public float focusRange = 3f;
 
-    [Range(1f, 10f)]
+    [Range(1.0f, 10f)]
     public float bokehRadius = 4f;
 
     [NonSerialized]

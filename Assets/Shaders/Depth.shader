@@ -197,10 +197,12 @@ Shader "Custom/Depth"
 
 					half dofStrength = smoothstep(0.1, 1, abs(coc));
 					half3 color = lerp(
-						source.rgb, dof.rgb,
+						source.rgb,dof.rgb,
 						dofStrength + dof.a - dofStrength * dof.a
+					
 					);
-					return half4(color, source.a);
+					return abs(coc);
+					//return half4(color, source.a);
 				}
 			ENDCG
 		}
