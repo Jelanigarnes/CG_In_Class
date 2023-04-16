@@ -1,2 +1,2 @@
-# In_Class_1
+# In_Class
  Working with shaders in unity (CG)
